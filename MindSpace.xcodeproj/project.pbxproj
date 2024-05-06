@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		324092452BE88F8300DD3520 /* MindSpaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324092442BE88F8300DD3520 /* MindSpaceApp.swift */; };
+		324092472BE88F8300DD3520 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324092462BE88F8300DD3520 /* ContentView.swift */; };
+		324092492BE88F8700DD3520 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 324092482BE88F8700DD3520 /* Assets.xcassets */; };
+		3240924C2BE88F8700DD3520 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3240924B2BE88F8700DD3520 /* Preview Assets.xcassets */; };
+		324092562BE88F8700DD3520 /* MindSpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324092552BE88F8700DD3520 /* MindSpaceTests.swift */; };
+		324092602BE88F8700DD3520 /* MindSpaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3240925F2BE88F8700DD3520 /* MindSpaceUITests.swift */; };
+		324092622BE88F8700DD3520 /* MindSpaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324092612BE88F8700DD3520 /* MindSpaceUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		324092522BE88F8700DD3520 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 324092392BE88F8300DD3520 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 324092402BE88F8300DD3520;
+			remoteInfo = MindSpace;
+		};
+		3240925C2BE88F8700DD3520 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 324092392BE88F8300DD3520 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 324092402BE88F8300DD3520;
+			remoteInfo = MindSpace;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		324092412BE88F8300DD3520 /* MindSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		324092442BE88F8300DD3520 /* MindSpaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindSpaceApp.swift; sourceTree = "<group>"; };
+		324092462BE88F8300DD3520 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		324092482BE88F8700DD3520 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3240924B2BE88F8700DD3520 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		324092512BE88F8700DD3520 /* MindSpaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindSpaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		324092552BE88F8700DD3520 /* MindSpaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindSpaceTests.swift; sourceTree = "<group>"; };
+		3240925B2BE88F8700DD3520 /* MindSpaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindSpaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3240925F2BE88F8700DD3520 /* MindSpaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindSpaceUITests.swift; sourceTree = "<group>"; };
+		324092612BE88F8700DD3520 /* MindSpaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindSpaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3240923E2BE88F8300DD3520 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3240924E2BE88F8700DD3520 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		324092582BE88F8700DD3520 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		324092382BE88F8300DD3520 = {
+			isa = PBXGroup;
+			children = (
+				324092432BE88F8300DD3520 /* MindSpace */,
+				324092542BE88F8700DD3520 /* MindSpaceTests */,
+				3240925E2BE88F8700DD3520 /* MindSpaceUITests */,
+				324092422BE88F8300DD3520 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		324092422BE88F8300DD3520 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				324092412BE88F8300DD3520 /* MindSpace.app */,
+				324092512BE88F8700DD3520 /* MindSpaceTests.xctest */,
+				3240925B2BE88F8700DD3520 /* MindSpaceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		324092432BE88F8300DD3520 /* MindSpace */ = {
+			isa = PBXGroup;
+			children = (
+				324092442BE88F8300DD3520 /* MindSpaceApp.swift */,
+				324092462BE88F8300DD3520 /* ContentView.swift */,
+				324092482BE88F8700DD3520 /* Assets.xcassets */,
+				3240924A2BE88F8700DD3520 /* Preview Content */,
+			);
+			path = MindSpace;
+			sourceTree = "<group>";
+		};
+		3240924A2BE88F8700DD3520 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3240924B2BE88F8700DD3520 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		324092542BE88F8700DD3520 /* MindSpaceTests */ = {
+			isa = PBXGroup;
+			children = (
+				324092552BE88F8700DD3520 /* MindSpaceTests.swift */,
+			);
+			path = MindSpaceTests;
+			sourceTree = "<group>";
+		};
+		3240925E2BE88F8700DD3520 /* MindSpaceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3240925F2BE88F8700DD3520 /* MindSpaceUITests.swift */,
+				324092612BE88F8700DD3520 /* MindSpaceUITestsLaunchTests.swift */,
+			);
+			path = MindSpaceUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		324092402BE88F8300DD3520 /* MindSpace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 324092652BE88F8700DD3520 /* Build configuration list for PBXNativeTarget "MindSpace" */;
+			buildPhases = (
+				3240923D2BE88F8300DD3520 /* Sources */,
+				3240923E2BE88F8300DD3520 /* Frameworks */,
+				3240923F2BE88F8300DD3520 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MindSpace;
+			productName = MindSpace;
+			productReference = 324092412BE88F8300DD3520 /* MindSpace.app */;
+			productType = "com.apple.product-type.application";
+		};
+		324092502BE88F8700DD3520 /* MindSpaceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 324092682BE88F8700DD3520 /* Build configuration list for PBXNativeTarget "MindSpaceTests" */;
+			buildPhases = (
+				3240924D2BE88F8700DD3520 /* Sources */,
+				3240924E2BE88F8700DD3520 /* Frameworks */,
+				3240924F2BE88F8700DD3520 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				324092532BE88F8700DD3520 /* PBXTargetDependency */,
+			);
+			name = MindSpaceTests;
+			productName = MindSpaceTests;
+			productReference = 324092512BE88F8700DD3520 /* MindSpaceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3240925A2BE88F8700DD3520 /* MindSpaceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3240926B2BE88F8700DD3520 /* Build configuration list for PBXNativeTarget "MindSpaceUITests" */;
+			buildPhases = (
+				324092572BE88F8700DD3520 /* Sources */,
+				324092582BE88F8700DD3520 /* Frameworks */,
+				324092592BE88F8700DD3520 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3240925D2BE88F8700DD3520 /* PBXTargetDependency */,
+			);
+			name = MindSpaceUITests;
+			productName = MindSpaceUITests;
+			productReference = 3240925B2BE88F8700DD3520 /* MindSpaceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		324092392BE88F8300DD3520 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					324092402BE88F8300DD3520 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					324092502BE88F8700DD3520 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 324092402BE88F8300DD3520;
+					};
+					3240925A2BE88F8700DD3520 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 324092402BE88F8300DD3520;
+					};
+				};
+			};
+			buildConfigurationList = 3240923C2BE88F8300DD3520 /* Build configuration list for PBXProject "MindSpace" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 324092382BE88F8300DD3520;
+			productRefGroup = 324092422BE88F8300DD3520 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				324092402BE88F8300DD3520 /* MindSpace */,
+				324092502BE88F8700DD3520 /* MindSpaceTests */,
+				3240925A2BE88F8700DD3520 /* MindSpaceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3240923F2BE88F8300DD3520 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3240924C2BE88F8700DD3520 /* Preview Assets.xcassets in Resources */,
+				324092492BE88F8700DD3520 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3240924F2BE88F8700DD3520 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		324092592BE88F8700DD3520 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3240923D2BE88F8300DD3520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				324092472BE88F8300DD3520 /* ContentView.swift in Sources */,
+				324092452BE88F8300DD3520 /* MindSpaceApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3240924D2BE88F8700DD3520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				324092562BE88F8700DD3520 /* MindSpaceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		324092572BE88F8700DD3520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				324092602BE88F8700DD3520 /* MindSpaceUITests.swift in Sources */,
+				324092622BE88F8700DD3520 /* MindSpaceUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		324092532BE88F8700DD3520 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 324092402BE88F8300DD3520 /* MindSpace */;
+			targetProxy = 324092522BE88F8700DD3520 /* PBXContainerItemProxy */;
+		};
+		3240925D2BE88F8700DD3520 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 324092402BE88F8300DD3520 /* MindSpace */;
+			targetProxy = 3240925C2BE88F8700DD3520 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		324092632BE88F8700DD3520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		324092642BE88F8700DD3520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		324092662BE88F8700DD3520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MindSpace/Preview Content\"";
+				DEVELOPMENT_TEAM = 9V4DSB5U59;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yousol.MindSpace;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		324092672BE88F8700DD3520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MindSpace/Preview Content\"";
+				DEVELOPMENT_TEAM = 9V4DSB5U59;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yousol.MindSpace;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		324092692BE88F8700DD3520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9V4DSB5U59;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yousol.MindSpaceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindSpace.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MindSpace";
+			};
+			name = Debug;
+		};
+		3240926A2BE88F8700DD3520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9V4DSB5U59;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yousol.MindSpaceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindSpace.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MindSpace";
+			};
+			name = Release;
+		};
+		3240926C2BE88F8700DD3520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9V4DSB5U59;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yousol.MindSpaceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MindSpace;
+			};
+			name = Debug;
+		};
+		3240926D2BE88F8700DD3520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9V4DSB5U59;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yousol.MindSpaceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MindSpace;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3240923C2BE88F8300DD3520 /* Build configuration list for PBXProject "MindSpace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				324092632BE88F8700DD3520 /* Debug */,
+				324092642BE88F8700DD3520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		324092652BE88F8700DD3520 /* Build configuration list for PBXNativeTarget "MindSpace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				324092662BE88F8700DD3520 /* Debug */,
+				324092672BE88F8700DD3520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		324092682BE88F8700DD3520 /* Build configuration list for PBXNativeTarget "MindSpaceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				324092692BE88F8700DD3520 /* Debug */,
+				3240926A2BE88F8700DD3520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3240926B2BE88F8700DD3520 /* Build configuration list for PBXNativeTarget "MindSpaceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3240926C2BE88F8700DD3520 /* Debug */,
+				3240926D2BE88F8700DD3520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 324092392BE88F8300DD3520 /* Project object */;
+}
