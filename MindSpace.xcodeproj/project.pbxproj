@@ -32,13 +32,16 @@
 		323AAF7E2BE893C400B3E95E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 323AAF7D2BE893C400B3E95E /* FirebaseFirestoreSwift */; };
 		323AAF802BE8989500B3E95E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 323AAF7F2BE8989500B3E95E /* GoogleService-Info.plist */; };
 		324092452BE88F8300DD3520 /* MindSpaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324092442BE88F8300DD3520 /* MindSpaceApp.swift */; };
-		324092472BE88F8300DD3520 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324092462BE88F8300DD3520 /* MainView.swift */; };
+		324092472BE88F8300DD3520 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324092462BE88F8300DD3520 /* TitleView.swift */; };
 		324092492BE88F8700DD3520 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 324092482BE88F8700DD3520 /* Assets.xcassets */; };
 		3240924C2BE88F8700DD3520 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3240924B2BE88F8700DD3520 /* Preview Assets.xcassets */; };
 		324092562BE88F8700DD3520 /* MindSpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324092552BE88F8700DD3520 /* MindSpaceTests.swift */; };
 		324092602BE88F8700DD3520 /* MindSpaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3240925F2BE88F8700DD3520 /* MindSpaceUITests.swift */; };
 		324092622BE88F8700DD3520 /* MindSpaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324092612BE88F8700DD3520 /* MindSpaceUITestsLaunchTests.swift */; };
 		328E0D752BEDFAB4000B7242 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E0D742BEDFAB4000B7242 /* Extensions.swift */; };
+		32FD86F22BF081C200A55B0C /* TitleViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD86F12BF081C200A55B0C /* TitleViewViewModel.swift */; };
+		32FD86F42BF081D400A55B0C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD86F32BF081D400A55B0C /* MainView.swift */; };
+		32FD86F62BF0870700A55B0C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD86F52BF0870700A55B0C /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +83,7 @@
 		323AAF7F2BE8989500B3E95E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		324092412BE88F8300DD3520 /* MindSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		324092442BE88F8300DD3520 /* MindSpaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindSpaceApp.swift; sourceTree = "<group>"; };
-		324092462BE88F8300DD3520 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		324092462BE88F8300DD3520 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		324092482BE88F8700DD3520 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3240924B2BE88F8700DD3520 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		324092512BE88F8700DD3520 /* MindSpaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindSpaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +92,9 @@
 		3240925F2BE88F8700DD3520 /* MindSpaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindSpaceUITests.swift; sourceTree = "<group>"; };
 		324092612BE88F8700DD3520 /* MindSpaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindSpaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		328E0D742BEDFAB4000B7242 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		32FD86F12BF081C200A55B0C /* TitleViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewViewModel.swift; sourceTree = "<group>"; };
+		32FD86F32BF081D400A55B0C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		32FD86F52BF0870700A55B0C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +130,7 @@
 		320D456C2BE89E9400F89353 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				324092462BE88F8300DD3520 /* MainView.swift */,
+				324092462BE88F8300DD3520 /* TitleView.swift */,
 				320D45702BE8A10600F89353 /* ProfileView.swift */,
 				320D45722BE8A13800F89353 /* NewDayView.swift */,
 				320D45742BE8A15600F89353 /* NewHabitView.swift */,
@@ -133,6 +139,8 @@
 				320D457A2BE8A1B300F89353 /* RegisterView.swift */,
 				320D457C2BE8A1F400F89353 /* HabitGoalView.swift */,
 				320D45922BE8A82100F89353 /* HeaderView.swift */,
+				32FD86F32BF081D400A55B0C /* MainView.swift */,
+				32FD86F52BF0870700A55B0C /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,6 +156,7 @@
 				320D458C2BE8A26300F89353 /* LogInViewViewModel.swift */,
 				320D458E2BE8A26A00F89353 /* RegisterViewViewModel.swift */,
 				320D45902BE8A27200F89353 /* HabitGoalViewViewModel.swift */,
+				32FD86F12BF081C200A55B0C /* TitleViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -371,13 +380,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				320D45892BE8A25300F89353 /* NewHabitViewViewModel.swift in Sources */,
-				324092472BE88F8300DD3520 /* MainView.swift in Sources */,
+				324092472BE88F8300DD3520 /* TitleView.swift in Sources */,
 				320D45792BE8A19700F89353 /* LogInView.swift in Sources */,
 				320D45832BE8A23900F89353 /* MainViewViewModel.swift in Sources */,
 				320D45852BE8A24500F89353 /* ProfileViewViewModel.swift in Sources */,
 				320D457D2BE8A1F400F89353 /* HabitGoalView.swift in Sources */,
 				320D45712BE8A10600F89353 /* ProfileView.swift in Sources */,
 				320D458B2BE8A25C00F89353 /* CalendarViewViewModel.swift in Sources */,
+				32FD86F22BF081C200A55B0C /* TitleViewViewModel.swift in Sources */,
 				320D458F2BE8A26A00F89353 /* RegisterViewViewModel.swift in Sources */,
 				320D45772BE8A15E00F89353 /* CalendarView.swift in Sources */,
 				320D45732BE8A13800F89353 /* NewDayView.swift in Sources */,
@@ -388,7 +398,9 @@
 				320D45912BE8A27200F89353 /* HabitGoalViewViewModel.swift in Sources */,
 				320D45932BE8A82100F89353 /* HeaderView.swift in Sources */,
 				320D458D2BE8A26300F89353 /* LogInViewViewModel.swift in Sources */,
+				32FD86F42BF081D400A55B0C /* MainView.swift in Sources */,
 				320D45872BE8A24D00F89353 /* NewDayViewViewModel.swift in Sources */,
+				32FD86F62BF0870700A55B0C /* HomeView.swift in Sources */,
 				320D457F2BE8A20D00F89353 /* User.swift in Sources */,
 				324092452BE88F8300DD3520 /* MindSpaceApp.swift in Sources */,
 			);

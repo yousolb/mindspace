@@ -46,7 +46,7 @@ struct RegisterView: View {
                                 .stroke(Color.black, lineWidth: 1)
                         )
                     Button {
-                        
+                        viewModel.register()
                     } label: {
                         ZStack {
                             Rectangle()
