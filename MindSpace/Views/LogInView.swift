@@ -17,8 +17,14 @@ struct LogInView: View {
             VStack {
                 
             HeaderView(title: "mind•space", desc: "Log in with your email and password")
-            
+                
             Form {
+                if !viewModel.errorMessage.isEmpty {
+                    Text(viewModel.errorMessage)
+                        .foregroundColor(.red)
+                        .multilineTextAlignment(.center)
+                }
+                
                 TextField("Email address", text: $viewModel.email)
                     .listRowSeparator(.hidden)
                     .padding()

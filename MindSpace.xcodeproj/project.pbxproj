@@ -38,6 +38,7 @@
 		324092562BE88F8700DD3520 /* MindSpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324092552BE88F8700DD3520 /* MindSpaceTests.swift */; };
 		324092602BE88F8700DD3520 /* MindSpaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3240925F2BE88F8700DD3520 /* MindSpaceUITests.swift */; };
 		324092622BE88F8700DD3520 /* MindSpaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324092612BE88F8700DD3520 /* MindSpaceUITestsLaunchTests.swift */; };
+		328E0D752BEDFAB4000B7242 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E0D742BEDFAB4000B7242 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		3240925B2BE88F8700DD3520 /* MindSpaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindSpaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3240925F2BE88F8700DD3520 /* MindSpaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindSpaceUITests.swift; sourceTree = "<group>"; };
 		324092612BE88F8700DD3520 /* MindSpaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindSpaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		328E0D742BEDFAB4000B7242 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				324092482BE88F8700DD3520 /* Assets.xcassets */,
 				324092442BE88F8300DD3520 /* MindSpaceApp.swift */,
 				323AAF7F2BE8989500B3E95E /* GoogleService-Info.plist */,
+				328E0D742BEDFAB4000B7242 /* Extensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				320D45732BE8A13800F89353 /* NewDayView.swift in Sources */,
 				320D45812BE8A21A00F89353 /* HabitGoal.swift in Sources */,
 				320D457B2BE8A1B300F89353 /* RegisterView.swift in Sources */,
+				328E0D752BEDFAB4000B7242 /* Extensions.swift in Sources */,
 				320D45752BE8A15600F89353 /* NewHabitView.swift in Sources */,
 				320D45912BE8A27200F89353 /* HabitGoalViewViewModel.swift in Sources */,
 				320D45932BE8A82100F89353 /* HeaderView.swift in Sources */,
