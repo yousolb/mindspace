@@ -7,6 +7,9 @@
 
 import SwiftUI
 import Charts
+import Firebase
+import FirebaseAuth
+import FirebaseStorage
 
 struct ProfileView: View {
     
@@ -17,6 +20,7 @@ struct ProfileView: View {
     let lightblue = UIColor(rgb: 0xE9EFFF)
     let navyblue = UIColor(rgb: 0x3e405b)
     @StateObject var viewModel = ProfileViewViewModel()
+    let firebaseManager = FirebaseManager.shared
     
     var orders: [Order] = [
             Order(amount: 10, day: 1),
@@ -113,13 +117,35 @@ struct ProfileView: View {
                         
                     }
                     .allowsHitTesting(true)
-                    .fullScreenCover(isPresented: $bgImagePicker, onDismiss: nil) {
+                    .fullScreenCover(isPresented: $bgImagePicker) {
                         ImagePicker(image: $bgImage)
+                            .onDisappear {
+                                if let bgImage = self.bgImage {
+                                    FirebaseManager.shared.uploadBgPicture(image: bgImage) { url in
+                                        if let bgImageURL = url {
+                                            FirebaseManager.shared.uploadBgURL(bgImageURL: bgImageURL)
+                                        } else {
+                                            print("Failed to upload background picture")
+                                        }
+                                    }
+                                }
+                            }
                     }
-                    .fullScreenCover(isPresented: $profilePicker, onDismiss: nil) {
+                    .fullScreenCover(isPresented: $profilePicker) {
                         ImagePicker(image: $profilePic)
+                            .onDisappear {
+                                if let profilePic = self.profilePic {
+                                    FirebaseManager.shared.uploadProfilePicture(image: profilePic) { url in
+                                        if let profilePictureURL = url {
+                                            FirebaseManager.shared.uploadURL(profilePictureURL: profilePictureURL)
+                                        } else {
+                                            print("Failed to upload profile picture")
+                                        }
+                                    }
+                                }
+                            }
                     }
-                    
+
                     Text(user.name)
                         .foregroundColor(.black)
                         .offset(y:-10)
@@ -164,6 +190,9 @@ struct ProfileView: View {
                     .offset(y: -20)
                     
                 }
+                .onAppear {
+                    fetchPictures()
+                }
             }
             else {
                 Text("Profile Loading")
@@ -173,7 +202,121 @@ struct ProfileView: View {
             viewModel.fetchUser()
         }
     }
+    
+    func fetchPictures() {
+        guard let currentUser = Auth.auth().currentUser else {
+            return
+        }
+        
+        let userRef = Firestore.firestore().collection("users").document(currentUser.uid)
+        
+        userRef.getDocument { document, error in
+            if let document = document, document.exists {
+                if let userData = try? document.data(as: User.self) {
+                    if let profilePictureURL = userData.profilePictureURL {
+                        URLSession.shared.dataTask(with: profilePictureURL) { data, response, error in
+                            if let data = data, let image = UIImage(data: data) {
+                                DispatchQueue.main.async {
+                                    self.profilePic = image
+                                }
+                            }
+                        }.resume()
+                    }
+                    
+                    if let bgImageURL = userData.bgImageURL {
+                        URLSession.shared.dataTask(with: bgImageURL) { data, response, error in
+                            if let data = data, let image = UIImage(data: data) {
+                                DispatchQueue.main.async {
+                                    self.bgImage = image
+                                }
+                            }
+                        }.resume()
+                    }
+                }
+            }
+        }
+    }
+
 }
+
+class FirebaseManager: NSObject {
+    
+    let auth: Auth
+    let storage: Storage
+    
+    static let shared = FirebaseManager()
+    
+    override init() {
+        self.auth = Auth.auth()
+        self.storage = Storage.storage()
+        super.init()
+    }
+    
+    func uploadProfilePicture(image: UIImage, completion: @escaping (URL?) -> Void) {
+        guard let imageData = image.jpegData(compressionQuality: 0.5) else {
+            completion(nil)
+            return
+        }
+        let profilePicRef = storage.reference().child("profile_pictures/\(UUID().uuidString).jpg")
+        profilePicRef.putData(imageData, metadata: nil) { (metadata, error) in
+            guard error == nil else {
+                completion(nil)
+                return
+            }
+            profilePicRef.downloadURL { (url, error) in
+                completion(url)
+            }
+        }
+    }
+    
+    func uploadURL(profilePictureURL: URL) {
+        guard let currentUser = Auth.auth().currentUser else {
+            print("User not authenticated")
+            return
+        }
+        let userRef = Firestore.firestore().collection("users").document(currentUser.uid)
+        userRef.setData(["profilePictureURL": profilePictureURL.absoluteString], merge: true) { error in
+            if let error = error {
+                print("Error updating user profile: \(error.localizedDescription)")
+            } else {
+                print("Profile picture URL updated successfully")
+            }
+        }
+    }
+    
+    func uploadBgPicture(image: UIImage, completion: @escaping (URL?) -> Void) {
+        guard let imageData = image.jpegData(compressionQuality: 0.5) else {
+            completion(nil)
+            return
+        }
+        let bgPicRef = storage.reference().child("bg_images/\(UUID().uuidString).jpg")
+        bgPicRef.putData(imageData, metadata: nil) { (metadata, error) in
+            guard error == nil else {
+                completion(nil)
+                return
+            }
+            bgPicRef.downloadURL { (url, error) in
+                completion(url)
+            }
+        }
+    }
+    
+    func uploadBgURL(bgImageURL: URL) {
+        guard let currentUser = Auth.auth().currentUser else {
+            print("User not authenticated")
+            return
+        }
+        let userRef = Firestore.firestore().collection("users").document(currentUser.uid)
+        userRef.setData(["bgImageURL": bgImageURL.absoluteString], merge: true) { error in
+            if let error = error {
+                print("Error updating user profile: \(error.localizedDescription)")
+            } else {
+                print("Background image URL updated successfully")
+            }
+        }
+    }
+}
+
 
 struct Order: Identifiable {
     var id: String = UUID().uuidString
