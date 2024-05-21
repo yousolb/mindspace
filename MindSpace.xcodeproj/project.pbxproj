@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		320D45712BE8A10600F89353 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D45702BE8A10600F89353 /* ProfileView.swift */; };
-		320D45732BE8A13800F89353 /* NewDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D45722BE8A13800F89353 /* NewDayView.swift */; };
 		320D45752BE8A15600F89353 /* NewHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D45742BE8A15600F89353 /* NewHabitView.swift */; };
 		320D45772BE8A15E00F89353 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D45762BE8A15E00F89353 /* CalendarView.swift */; };
 		320D45792BE8A19700F89353 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D45782BE8A19700F89353 /* LogInView.swift */; };
@@ -18,7 +17,6 @@
 		320D45812BE8A21A00F89353 /* HabitGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D45802BE8A21A00F89353 /* HabitGoal.swift */; };
 		320D45832BE8A23900F89353 /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D45822BE8A23900F89353 /* MainViewViewModel.swift */; };
 		320D45852BE8A24500F89353 /* ProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D45842BE8A24500F89353 /* ProfileViewViewModel.swift */; };
-		320D45872BE8A24D00F89353 /* NewDayViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D45862BE8A24D00F89353 /* NewDayViewViewModel.swift */; };
 		320D45892BE8A25300F89353 /* NewHabitViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D45882BE8A25300F89353 /* NewHabitViewViewModel.swift */; };
 		320D458B2BE8A25C00F89353 /* CalendarViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D458A2BE8A25C00F89353 /* CalendarViewViewModel.swift */; };
 		320D458D2BE8A26300F89353 /* LogInViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D458C2BE8A26300F89353 /* LogInViewViewModel.swift */; };
@@ -39,6 +37,10 @@
 		324092602BE88F8700DD3520 /* MindSpaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3240925F2BE88F8700DD3520 /* MindSpaceUITests.swift */; };
 		324092622BE88F8700DD3520 /* MindSpaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324092612BE88F8700DD3520 /* MindSpaceUITestsLaunchTests.swift */; };
 		32675D572BFB25650026E7BC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 32675D562BFB25650026E7BC /* FirebaseStorage */; };
+		32675D592BFC4ADD0026E7BC /* HomeViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32675D582BFC4ADD0026E7BC /* HomeViewViewModel.swift */; };
+		32675D5B2BFC70250026E7BC /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32675D5A2BFC70250026E7BC /* DayView.swift */; };
+		32675D5D2BFC70510026E7BC /* DayViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32675D5C2BFC70510026E7BC /* DayViewViewModel.swift */; };
+		32675D5F2BFC73960026E7BC /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32675D5E2BFC73960026E7BC /* MoodView.swift */; };
 		328E0D752BEDFAB4000B7242 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E0D742BEDFAB4000B7242 /* Extensions.swift */; };
 		32C0F34C2BF6C29600EE4827 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C0F34B2BF6C29600EE4827 /* ImagePicker.swift */; };
 		32FD86F22BF081C200A55B0C /* TitleViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD86F12BF081C200A55B0C /* TitleViewViewModel.swift */; };
@@ -65,7 +67,6 @@
 
 /* Begin PBXFileReference section */
 		320D45702BE8A10600F89353 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		320D45722BE8A13800F89353 /* NewDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDayView.swift; sourceTree = "<group>"; };
 		320D45742BE8A15600F89353 /* NewHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitView.swift; sourceTree = "<group>"; };
 		320D45762BE8A15E00F89353 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		320D45782BE8A19700F89353 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		320D45802BE8A21A00F89353 /* HabitGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitGoal.swift; sourceTree = "<group>"; };
 		320D45822BE8A23900F89353 /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
 		320D45842BE8A24500F89353 /* ProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewViewModel.swift; sourceTree = "<group>"; };
-		320D45862BE8A24D00F89353 /* NewDayViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDayViewViewModel.swift; sourceTree = "<group>"; };
 		320D45882BE8A25300F89353 /* NewHabitViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitViewViewModel.swift; sourceTree = "<group>"; };
 		320D458A2BE8A25C00F89353 /* CalendarViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewViewModel.swift; sourceTree = "<group>"; };
 		320D458C2BE8A26300F89353 /* LogInViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewViewModel.swift; sourceTree = "<group>"; };
@@ -93,6 +93,10 @@
 		3240925B2BE88F8700DD3520 /* MindSpaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindSpaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3240925F2BE88F8700DD3520 /* MindSpaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindSpaceUITests.swift; sourceTree = "<group>"; };
 		324092612BE88F8700DD3520 /* MindSpaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindSpaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		32675D582BFC4ADD0026E7BC /* HomeViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewViewModel.swift; sourceTree = "<group>"; };
+		32675D5A2BFC70250026E7BC /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		32675D5C2BFC70510026E7BC /* DayViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewViewModel.swift; sourceTree = "<group>"; };
+		32675D5E2BFC73960026E7BC /* MoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodView.swift; sourceTree = "<group>"; };
 		328E0D742BEDFAB4000B7242 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		32C0F34B2BF6C29600EE4827 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		32FD86F12BF081C200A55B0C /* TitleViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewViewModel.swift; sourceTree = "<group>"; };
@@ -136,7 +140,6 @@
 			children = (
 				324092462BE88F8300DD3520 /* TitleView.swift */,
 				320D45702BE8A10600F89353 /* ProfileView.swift */,
-				320D45722BE8A13800F89353 /* NewDayView.swift */,
 				320D45742BE8A15600F89353 /* NewHabitView.swift */,
 				320D45762BE8A15E00F89353 /* CalendarView.swift */,
 				320D45782BE8A19700F89353 /* LogInView.swift */,
@@ -145,6 +148,8 @@
 				320D45922BE8A82100F89353 /* HeaderView.swift */,
 				32FD86F32BF081D400A55B0C /* MainView.swift */,
 				32FD86F52BF0870700A55B0C /* HomeView.swift */,
+				32675D5A2BFC70250026E7BC /* DayView.swift */,
+				32675D5E2BFC73960026E7BC /* MoodView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,13 +159,14 @@
 			children = (
 				320D45822BE8A23900F89353 /* MainViewViewModel.swift */,
 				320D45842BE8A24500F89353 /* ProfileViewViewModel.swift */,
-				320D45862BE8A24D00F89353 /* NewDayViewViewModel.swift */,
 				320D45882BE8A25300F89353 /* NewHabitViewViewModel.swift */,
 				320D458A2BE8A25C00F89353 /* CalendarViewViewModel.swift */,
 				320D458C2BE8A26300F89353 /* LogInViewViewModel.swift */,
 				320D458E2BE8A26A00F89353 /* RegisterViewViewModel.swift */,
 				320D45902BE8A27200F89353 /* HabitGoalViewViewModel.swift */,
 				32FD86F12BF081C200A55B0C /* TitleViewViewModel.swift */,
+				32675D582BFC4ADD0026E7BC /* HomeViewViewModel.swift */,
+				32675D5C2BFC70510026E7BC /* DayViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -387,6 +393,7 @@
 			files = (
 				320D45892BE8A25300F89353 /* NewHabitViewViewModel.swift in Sources */,
 				324092472BE88F8300DD3520 /* TitleView.swift in Sources */,
+				32675D5D2BFC70510026E7BC /* DayViewViewModel.swift in Sources */,
 				32C0F34C2BF6C29600EE4827 /* ImagePicker.swift in Sources */,
 				320D45792BE8A19700F89353 /* LogInView.swift in Sources */,
 				320D45832BE8A23900F89353 /* MainViewViewModel.swift in Sources */,
@@ -397,18 +404,19 @@
 				32FD86F22BF081C200A55B0C /* TitleViewViewModel.swift in Sources */,
 				320D458F2BE8A26A00F89353 /* RegisterViewViewModel.swift in Sources */,
 				320D45772BE8A15E00F89353 /* CalendarView.swift in Sources */,
-				320D45732BE8A13800F89353 /* NewDayView.swift in Sources */,
 				320D45812BE8A21A00F89353 /* HabitGoal.swift in Sources */,
 				320D457B2BE8A1B300F89353 /* RegisterView.swift in Sources */,
 				328E0D752BEDFAB4000B7242 /* Extensions.swift in Sources */,
+				32675D5F2BFC73960026E7BC /* MoodView.swift in Sources */,
+				32675D5B2BFC70250026E7BC /* DayView.swift in Sources */,
 				320D45752BE8A15600F89353 /* NewHabitView.swift in Sources */,
 				320D45912BE8A27200F89353 /* HabitGoalViewViewModel.swift in Sources */,
 				320D45932BE8A82100F89353 /* HeaderView.swift in Sources */,
 				320D458D2BE8A26300F89353 /* LogInViewViewModel.swift in Sources */,
 				32FD86F42BF081D400A55B0C /* MainView.swift in Sources */,
-				320D45872BE8A24D00F89353 /* NewDayViewViewModel.swift in Sources */,
 				32FD86F62BF0870700A55B0C /* HomeView.swift in Sources */,
 				320D457F2BE8A20D00F89353 /* User.swift in Sources */,
+				32675D592BFC4ADD0026E7BC /* HomeViewViewModel.swift in Sources */,
 				324092452BE88F8300DD3520 /* MindSpaceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

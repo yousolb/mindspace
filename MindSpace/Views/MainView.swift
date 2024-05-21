@@ -13,18 +13,23 @@ struct MainView: View {
     var body: some View {
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
             TabView {
-                HomeView()
-                    .tabItem {
-                        Label("Home", systemImage: "house")
-                    }
-                CalendarView()
-                    .tabItem {
-                        Label("Calendar", systemImage: "calendar")
-                    }
-                ProfileView()
-                    .tabItem {
-                        Label("Profile", systemImage: "person")
-                    }
+                Group {
+                    HomeView()
+                        .tabItem {
+                            Label("Home", systemImage: "house")
+                        }
+                    CalendarView()
+                        .tabItem {
+                            Label("Calendar", systemImage: "calendar")
+                        }
+                    ProfileView()
+                        .tabItem {
+                            Label("Profile", systemImage: "person")
+                        }
+                }
+                .toolbarBackground(.black, for: .tabBar)
+                .toolbarBackground(.visible, for: .tabBar)
+                .toolbarColorScheme(.dark, for: .tabBar)
             }
         }
         else {
