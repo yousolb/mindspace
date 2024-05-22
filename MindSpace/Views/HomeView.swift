@@ -14,6 +14,8 @@ struct HomeView: View {
     
     @State var profilePic: UIImage?
     @StateObject var viewModel = HomeViewViewModel()
+    @State private var offsetY: CGFloat = UIScreen.main.bounds.height*1 / 2
+    @State private var isDragging = false
     
     var body: some View {
         
@@ -57,67 +59,67 @@ struct HomeView: View {
                     }
                 }
             }
-            .offset(x: 170, y: 0)
+            .offset(x: 200, y: 0)
             
             UnevenRoundedRectangle(cornerRadii: .init(bottomTrailing: 50, topTrailing: 30))
                 .fill(gradient)
                 .frame(width: 200, height: 100)
-                .offset(x: -160, y: 80)
+                .offset(x: -140, y: 80)
                 .shadow(color: .gray, radius: 5, x: 0, y: 8)
                 .rotationEffect(.degrees(-10))
             Circle()
                 .fill(.black)
                 .frame(width: 7, height: 7)
-                .offset(x: -90, y: 80)
+                .offset(x: -60, y: 80)
             Circle()
                 .fill(.black)
                 .frame(width: 7, height: 7)
-                .offset(x: -70, y: 80)
+                .offset(x: -80, y: 80)
             Ellipse()
                 .trim(from: 0, to: 0.5)
                 .frame(width: 20, height: 30)
-                .offset(x: -80, y: 90)
+                .offset(x: -70, y: 90)
         
-            Blob()
+            RoundedRectangle(cornerRadius: 100)
                 .fill(Color(lightpink))
-                .frame(width: 250, height: 150)
+                .frame(width: 180, height: 150)
                 .padding()
-                .offset(x: -40, y: 320)
-                .rotationEffect(.degrees(-50))
+                .offset(x: 90, y: 320)
+                .rotationEffect(.degrees(-30))
                 .shadow(color: .gray, radius: 5, x: 0, y: 8)
             Circle()
                 .fill(.black)
                 .frame(width: 9, height: 9)
-                .offset(x: 160, y: 230)
+                .offset(x: 170, y: 230)
             Circle()
                 .fill(.black)
                 .frame(width: 9, height: 9)
-                .offset(x: 190, y: 230)
+                .offset(x: 200, y: 230)
             SmileCurve()
                 .stroke(Color.black, lineWidth: 2)
                 .frame(width: 25, height: 20)
                 .rotationEffect(.degrees(180))
-                .offset(x: 175, y: 245)
+                .offset(x: 185, y: 245)
             
             RoundedRectangle(cornerRadius: 70)
                 .fill(Color(darkblue))
                 .frame(width: 240, height: 200)
-                .offset(x: -400, y: 100)
+                .offset(x: -390, y: 120)
                 .shadow(color: .gray, radius: 5, x: 0, y: 8)
                 .rotationEffect(.degrees(-60))
             Circle()
                 .fill(.black)
                 .frame(width: 12, height: 12)
-                .offset(x: -80, y: 360)
+                .offset(x: -60, y: 360)
             Circle()
                 .fill(.black)
                 .frame(width: 12, height: 12)
-                .offset(x: -40, y: 360)
+                .offset(x: -20, y: 360)
             SmileCurve()
                 .stroke(Color.black, lineWidth: 2)
                 .frame(width: 40, height: 40)
                 .rotationEffect(.degrees(180))
-                .offset(x: -60, y: 380)
+                .offset(x: -40, y: 380)
             
             Button (action: {
             }) {
@@ -125,33 +127,32 @@ struct HomeView: View {
                     RoundedRectangle(cornerRadius: 50)
                         .fill(.white)
                         .frame(width: 70, height: 50)
-                        .offset(x: 180, y: 380)
                     Image(systemName: "arrow.right")
                         .resizable()
-                        .offset(x: 180, y: 380)
                         .frame(width: 30, height: 20)
                         .foregroundColor(.black)
                 }
             }
+            .offset(x: 210, y: 370)
         
             VStack {
                 Text("Today")
                     .font(.custom("Arial Rounded MT Bold", size: 20))
-                    .offset(x: -80, y: 20)
+                    .offset(x: -60, y: 20)
                 Text(formattedDate)
                     .font(.custom("Arial", size: 20))
-                    .offset(x: -35, y: 30)
+                    .offset(x: -15, y: 30)
                 if let user = viewModel.user {
                     Text("Hello \(user.name)!")
                         .foregroundColor(.black)
-                        .offset(x: 0, y: 180)
+                        .offset(x: 10, y: 180)
                         .font(.custom("Arial Rounded MT Bold", size: 35))
                         .bold()
                 }
                 else {
                     Text("Loading...")
                         .foregroundColor(.black)
-                        .offset(x: 0, y: 180)
+                        .offset(x: 10, y: 180)
                         .font(.custom("Arial Rounded MT Bold", size: 35))
                         .bold()
                 }
@@ -159,7 +160,6 @@ struct HomeView: View {
                     .offset(x: 30, y: 200)
                     .font(.custom("Arial", size: 20))
             }
-            
         }
         .frame(
             minWidth: 0,
@@ -173,6 +173,45 @@ struct HomeView: View {
             fetchPictures()
             viewModel.fetchUser()
         }
+        .overlay(
+            VStack(spacing: 0) {
+                Capsule()
+                    .fill(Color.gray)
+                    .frame(width: 40, height: 6)
+                    .padding(10)
+                
+                ScrollView {
+                    VStack {
+                        Text("Your Routine")
+                            .font(.title)
+                            .padding()
+                            .offset(x: -90, y: 10)
+                        ForEach(0..<20) { i in
+                            Text("Item \(i)")
+                                .padding()
+                            Divider()
+                        }
+                    }
+                }
+                .background(Color.white)
+                .cornerRadius(20)
+            }
+            .frame(maxWidth: .infinity)
+            .offset(y: offsetY)
+            .animation(.interactiveSpring(), value: offsetY)
+            .gesture(
+                DragGesture()
+                    .onChanged { value in
+                        offsetY = max(0, offsetY + value.translation.height)
+                    }
+                    .onEnded { value in
+                        isDragging = false
+                        if offsetY > UIScreen.main.bounds.height / 3 {
+                            offsetY = UIScreen.main.bounds.height * 1 / 2
+                        }
+                    }
+            )
+        )
     }
     
     func fetchPictures() {
@@ -200,33 +239,6 @@ struct HomeView: View {
     }
 }
 
-
-struct Blob: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        
-        let width = rect.width
-        let height = rect.height
-        let centerX = rect.midX
-        let centerY = rect.midY
-        
-        let start = CGPoint(x: centerX, y: centerY - height / 2)
-        let end = CGPoint(x: centerX, y: centerY + height / 2)
-        
-        let controlPoint1 = CGPoint(x: centerX + width / 2, y: centerY - height / 2)
-        let controlPoint2 = CGPoint(x: centerX + width / 2, y: centerY + height / 2)
-        let controlPoint3 = CGPoint(x: centerX - width / 2, y: centerY + height / 2)
-        let controlPoint4 = CGPoint(x: centerX - width / 2, y: centerY - height / 2)
-        
-        path.move(to: start)
-        
-        path.addCurve(to: end, control1: controlPoint1, control2: controlPoint2)
-        path.addCurve(to: start, control1: controlPoint3, control2: controlPoint4)
-        
-        return path
-    }
-}
-
 struct SmileCurve: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
@@ -245,42 +257,6 @@ struct SmileCurve: Shape {
         return path
     }
 }
-
-struct Blob2: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        
-        let width = rect.width
-        let height = rect.height
-        let centerX = rect.midX
-        let centerY = rect.midY
-        
-        let controlPointX = width * 0.35
-        let controlPointY = height * 0.35
-        
-        path.move(to: CGPoint(x: centerX, y: centerY - height / 2))
-        
-        path.addCurve(to: CGPoint(x: centerX + width / 2, y: centerY),
-                      control1: CGPoint(x: centerX + controlPointX, y: centerY - height / 2),
-                      control2: CGPoint(x: centerX + width / 2, y: centerY - controlPointY))
-        
-        path.addCurve(to: CGPoint(x: centerX, y: centerY + height / 2),
-                      control1: CGPoint(x: centerX + width / 2, y: centerY + controlPointY),
-                      control2: CGPoint(x: centerX + controlPointX, y: centerY + height / 2))
-        
-        path.addCurve(to: CGPoint(x: centerX - width / 2, y: centerY),
-                      control1: CGPoint(x: centerX - controlPointX, y: centerY + height / 2),
-                      control2: CGPoint(x: centerX - width / 2, y: centerY + controlPointY))
-        
-        path.addCurve(to: CGPoint(x: centerX, y: centerY - height / 2),
-                      control1: CGPoint(x: centerX - width / 2, y: centerY - controlPointY),
-                      control2: CGPoint(x: centerX - controlPointX, y: centerY - height / 2))
-        
-        return path
-    }
-}
-
-
 
 func getFormattedDate(date: Date) -> String {
     let dateFormatter = DateFormatter()

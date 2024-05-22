@@ -10,8 +10,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class ProfileViewViewModel: ObservableObject {
-    init() {}
-    
+    init() {}    
     @Published var user: User? = nil
     
     func fetchUser() {
@@ -28,7 +27,8 @@ class ProfileViewViewModel: ObservableObject {
                 self?.user = User(id: data["id"] as? String ?? "",
                                   name: data["name"] as? String ?? "",
                                   email: data["email"] as? String ?? "",
-                                  joined: data["joined"] as? TimeInterval ?? 0)
+                                  joined: data["joined"] as? TimeInterval ?? 0,
+                                  tasks: data["tasks"] as? [HabitGoal] ?? [])
             }
         }
     }

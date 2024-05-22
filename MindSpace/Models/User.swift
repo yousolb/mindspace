@@ -7,11 +7,12 @@
 
 import Foundation
 
-struct User: Codable {
+struct User: Codable, Identifiable {
     let id: String
-    let name: String
+    var name: String
     let email: String
     let joined: TimeInterval
     var profilePictureURL: URL?
     var bgImageURL: URL?
+    var tasks: [HabitGoal]
 }

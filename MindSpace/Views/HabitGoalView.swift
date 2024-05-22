@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct HabitGoalView: View {
+
+    @StateObject var viewModel = HabitGoalViewViewModel()
+    private let task: HabitGoal
+    
+    init(task: HabitGoal) {
+        self.task = task
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text(task.name)
+            Button {
+                viewModel.toggleDone(task: self.task)
+            } label: {
+                Image(systemName: task.completionStatus ? "checkmark.square.fill" : "square")
+            }
+        }
     }
 }
 
-#Preview {
-    HabitGoalView()
+struct HabitGoalView_Previews: PreviewProvider {
+    static var previews: some View {
+        let habitGoal = HabitGoal(id: "unique", name: "read 100 pages", date: Date(), repetitionSettings: .daily, completionStatus: false)
+        
+        HabitGoalView(task: habitGoal)
+    }
 }
